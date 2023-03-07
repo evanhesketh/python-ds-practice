@@ -21,3 +21,16 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+    no_spaces = []
+    split_phrase = [*phrase]
+    for char in split_phrase:
+        if char != ' ':
+            no_spaces.append(char.lower())
+
+
+    replica = no_spaces.copy()
+
+    replica.reverse()
+    return replica == no_spaces
+
+
